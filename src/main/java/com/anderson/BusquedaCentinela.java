@@ -1,17 +1,56 @@
 package com.anderson;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class BusquedaCentinela {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    public int buscarConCentinela(int[] array, int valorBuscado) {
+        int comparaciones = 0;
+
+        // validamos que el arreglo no este vacio
+        if (array.length == 0) {
+            System.out.println("El arreglo esta vacío");
+            return -1;
         }
+
+        int n = array.length;
+
+        comparaciones++;
+        if (array[n - 1] == valorBuscado) {
+            System.out.println("Valor encontrado en la ultima posición");
+            System.out.println("Comparaciones realizadas: " + comparaciones);
+            return n - 1;
+        }
+
+        // guardamos el ultimo elemento antes de modificarlo
+        int ultimo = array[n - 1];
+
+        // escribimos el centinela en la ultima posicion
+        array[n - 1] = valorBuscado;
+
+        // buscamos sin condición de límite
+        int i = 0;
+        while (true) {
+            comparaciones++;
+
+            if (array[i] == valorBuscado) { //comparamos si cada valor del array que recorre no coincide con el valorBuscado
+                break; // se detuvo por el centinela o por encontrar el valor real
+            }
+
+            i++;
+        }
+
+        // restauramos el valor original del arreglo
+        array[n - 1] = ultimo;
+
+        // verificamos si fue encontrado antes de llegar al centinela
+        if (i < n - 1) {
+            System.out.println("Valor encontrado en el índice: " + i);
+            System.out.println("Comparaciones realizadas: " + comparaciones);
+            return i;
+        }
+
+        // si llegamos al centinela significa que no estaba en el arreglo original
+        System.out.println("Valor NO encontrado.");
+        System.out.println("Comparaciones realizadas: " + comparaciones);
+        return -1;
     }
 }

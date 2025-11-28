@@ -15,7 +15,7 @@
 
  ## 1. Estructura del proyecto
 
-
+```
 taller7-algoritmo-busqueda-estructura-3ciclo-u2-develop/
 ├── .gitignore
 ├── pom.xml
@@ -36,7 +36,7 @@ taller7-algoritmo-busqueda-estructura-3ciclo-u2-develop/
                     ├── ListaSimpleEnlazada.java
                     ├── NodoSLL.java
                     └── SearchDemo.java
-
+```
 
 ---
 

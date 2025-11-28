@@ -1,17 +1,81 @@
 package com.anderson;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class BusquedaSecuencial {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.IntPredicate;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+/**
+ * Clase que implementa las variantes clásicas de búsqueda secuencial en arreglos.
+ * Métodos:
+ *  - buscarPrimero: retorna primer índice donde aparece la clave.
+ *  - buscarUltimo: retorna último índice donde aparece la clave.
+ *  - buscarTodos: retorna todos los índices que cumplen un predicado.
+ *
+ * Complejidad de todos los métodos: O(n)
+ */
+public class BusquedaSecuencial {
+
+    /**
+     * Retorna el índice de la primera aparición de la clave.
+     * @param arreglo arreglo donde se busca
+     * @param clave valor a buscar
+     * @return índice de la primera aparición, o -1 si no existe
+     */
+    public int buscarPrimero(int[] arreglo, int clave) {
+        if (arreglo == null || arreglo.length == 0) {
+            return -1;
         }
+
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] == clave) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    /**
+     * Retorna el índice de la última aparición de la clave.
+     * @param arreglo arreglo donde se busca
+     * @param clave valor a buscar
+     * @return índice de la última aparición, o -1 si no existe
+     */
+    public int buscarUltimo(int[] arreglo, int clave) {
+        if (arreglo == null || arreglo.length == 0) {
+            return -1;
+        }
+
+        int ultimo = -1;
+
+        for (int i = 0; i < arreglo.length; i++) {
+            if (arreglo[i] == clave) {
+                ultimo = i;
+            }
+        }
+        return ultimo;
+    }
+
+
+    /**
+     * Retorna todos los índices que cumplen con un predicado (par, igual a clave, menor que, etc.).
+     * @param arreglo arreglo donde se evalúa el predicado
+     * @param predicado condición lógica aplicada a cada elemento
+     * @return lista de índices que cumplen el predicado
+     */
+    public List<Integer> buscarTodos(int[] arreglo, IntPredicate predicado) {
+        List<Integer> resultado = new ArrayList<>();
+
+        if (arreglo == null || arreglo.length == 0) {
+            return resultado; // retorna lista vacía
+        }
+
+        for (int i = 0; i < arreglo.length; i++) {
+            if (predicado.test(arreglo[i])) {
+                resultado.add(i);
+            }
+        }
+
+        return resultado;
     }
 }

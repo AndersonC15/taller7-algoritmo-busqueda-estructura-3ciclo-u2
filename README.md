@@ -3,6 +3,10 @@
 *Docente:* Ing. Andrés Roberto Navas Castellanos
 
 ---
+Link del taller:
+## [Taller 7]()
+
+---
 
 ## Integrantes: 
 

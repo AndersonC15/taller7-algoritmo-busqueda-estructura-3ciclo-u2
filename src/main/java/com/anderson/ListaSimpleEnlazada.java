@@ -24,11 +24,12 @@ public class ListaSimpleEnlazada {
      * Crea la lista desde un arreglo de enteros.
      *
      * @param datos arreglo de valores
+     * @return
      */
-    public void desdeArreglo(int[] datos) {
+    public NodoSLL desdeArreglo(int[] datos) {
         if (datos == null || datos.length == 0) {
             cabeza = null;
-            return;
+            return null;
         }
 
         cabeza = new NodoSLL(datos[0]);
@@ -38,6 +39,7 @@ public class ListaSimpleEnlazada {
             actual.siguiente = new NodoSLL(datos[i]);
             actual = actual.siguiente;
         }
+        return actual;
     }
 
     public NodoSLL obtenerCabeza() {

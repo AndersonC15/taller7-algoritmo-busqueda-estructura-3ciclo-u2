@@ -1,3 +1,5 @@
+package com.anderson;
+
 import java.util.List;
 /**
  * Clase que representa un caso de prueba para los métodos de búsqueda secuencial.

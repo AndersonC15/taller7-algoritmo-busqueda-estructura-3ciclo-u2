@@ -1,5 +1,8 @@
 package com.anderson;
 
+import java.util.List;
+import java.util.function.Predicate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class BusquedaListaSimple {
@@ -13,5 +16,17 @@ public class BusquedaListaSimple {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+    }
+
+    public NodoSLL buscarPrimero(NodoSLL cabeza, int i) {
+        return cabeza;
+    }
+
+    public NodoSLL buscarUltimo(NodoSLL cabeza, int i) {
+        return cabeza;
+    }
+
+    public List<NodoSLL> buscarTodos(NodoSLL cabeza, Predicate<NodoSLL> valorMenorATres) {
+        return List.of();
     }
 }

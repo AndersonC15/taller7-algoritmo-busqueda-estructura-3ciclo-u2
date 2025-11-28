@@ -88,34 +88,34 @@ public class DemostracionBusqueda {
         // ===============================================
         // D. BÚSQUEDAS EN SLL 
         // ===============================================
-        System.out.println("\n--- D. BUSQUEDA EN LISTA SIMPLE ENLAZADA (Persona 3) ---");
+        System.out.println("\n--- D. BUSQUEDA EN LISTA SIMPLE ENLAZADA ---");
         
         // Crear la lista 3, 1, 3, 2
-        ListaSimple lista = new ListaSimple();
-        Nodo cabeza = lista.desdeArreglo(sll_datos); 
+        ListaSimpleEnlazada lista = new ListaSimpleEnlazada();
+        NodoSLL cabeza = lista.desdeArreglo(sll_datos);
         
         BusquedaListaSimple buscadorSLL = new BusquedaListaSimple();
 
         System.out.println("Lista: [3, 1, 3, 2]");
 
         // 1) Buscar primero (Clave 3)
-        Nodo primero = buscadorSLL.buscarPrimero(cabeza, 3);
+        NodoSLL primero = buscadorSLL.buscarPrimero(cabeza, 3);
         System.out.println("  -> Primero(3): " + (primero != null ? "Valor " + primero.valor : "No encontrado"));
 
         // 2) Buscar ultimo (Clave 3)
-        Nodo ultimo = buscadorSLL.buscarUltimo(cabeza, 3);
+        NodoSLL ultimo = buscadorSLL.buscarUltimo(cabeza, 3);
         System.out.println("  -> Ultimo(3): " + (ultimo != null ? "Valor " + ultimo.valor : "No encontrado"));
 
         // 3) Buscar todos (Predicado: valor < 3)
-        Predicate<Nodo> valorMenorATres = nodo -> nodo.valor < 3;
-        List<Nodo> menores = buscadorSLL.buscarTodos(cabeza, valorMenorATres);
+        Predicate<NodoSLL> valorMenorATres = nodo -> nodo.valor < 3;
+        List<NodoSLL> menores = buscadorSLL.buscarTodos(cabeza, valorMenorATres);
         System.out.println("  -> Nodos valor < 3: " + menores.size() + " nodos encontrados.");
         
         System.out.println("\n==============================================");
         System.out.println("=== FIN DE DEMOSTRACION ===");
         System.out.println("==============================================");
 
-        
+
     }
 
 }

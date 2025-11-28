@@ -1,7 +1,6 @@
 # Taller 7 - Implementación de Algoritmos de Búsqueda
 ## FEIRNNR - Carrera de Computación (Estructura de Datos)
 *Docente:* Ing. Andrés Roberto Navas Castellanos
-
 ---
 
 ## Integrantes: 
@@ -11,6 +10,10 @@
 ### [Daniel Savedra](https://github.com/Dan-San837)
 ### [Anderson Coello](https://github.com/AndersonC15)
 
+
+---
+Link del taller:
+# [Taller 7](https://github.com/AndersonC15/taller7-algoritmo-busqueda-estructura-3ciclo-u2/blob/develop/Taller_7_Grupo_K.pdf)
 ---
 
  ## 1. Estructura del proyecto

@@ -2,11 +2,33 @@
 ## FEIRNNR - Carrera de Computación (Estructura de Datos)
 **Docente:** Ing. Andrés Roberto Navas Castellanos
 
-**Grupo K:** 
-- Anderson Mateo Coello Jaramillo 
-- Daniel Alejandro Saavedra Jaramillo 
-- Ana Cristina Panamito Flores
-- Royel Ivan Jima Pardo
+
+
+## Estructura del proyecto
+
+```
+taller7-algoritmo-busqueda-estructura-3ciclo-u2-develop/
+├── .gitignore
+├── pom.xml
+├── README.md
+└── src/
+    └── main/
+        └── java/
+            └── com/
+                └── anderson/
+                    ├── DataSets.csv
+                    ├── BusquedaCentinela.java
+                    ├── BusquedaListaSimple.java
+                    ├── BusquedaSecuencial.java
+                    ├── BusquedaSLL.java
+                    ├── CasoPrueba.java
+                    ├── CasosLoader.java
+                    ├── DemostracionBusqueda.java
+                    ├── ListaSimpleEnlazada.java
+                    ├── NodoSLL.java
+                    └── SearchDemo.java
+```
+
 
 ## 1. Compilación y Ejecución del Proyecto
 
@@ -85,3 +107,13 @@ La demostración utiliza la lista de prueba `[3, 1, 3, 2]` y el nodo se asume co
 | **`buscarPrimero`** | `3` | **Valor 3** (en índice 0) | **Valor 2** |  **ERROR** | La implementación retorna un valor incorrecto (probablemente el índice '2' o un conteo) en lugar del valor del nodo. |
 | **`buscarUltimo`** | `3` | **Valor 3** (en índice 2) | **Valor 2** |  **ERROR** | La implementación falla al identificar la última ocurrencia, retornando un valor incorrecto. |
 | **`buscarTodos`** | `valor < 3` | **2 nodos encontrados** (Valores 1 y 2) | **0 nodos encontrados** |  **ERROR** | La función `buscarTodos` no está evaluando correctamente el predicado o la lista no se construyó completamente. |
+
+
+
+
+## Autores: 
+### [Ana Panamito](https://github.com/AnaPanamito)
+### [Royel Jima](https://github.com/R0yalCode)
+### [Daniel Saavedra](https://github.com/Dan-San837)
+### [Anderson Coello](https://github.com/AndersonC15)
+

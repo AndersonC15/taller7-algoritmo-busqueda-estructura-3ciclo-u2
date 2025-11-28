@@ -1,6 +1,7 @@
 # Taller 7 - Implementación de Algoritmos de Búsqueda
 ## FEIRNNR - Carrera de Computación (Estructura de Datos)
 **Docente:** Andrés Roberto Navas Castellanos
+
 **Grupo K:** 
 - Anderson Mateo Coello Jaramillo 
 - Daniel Alejandro Saavedra Jaramillo 

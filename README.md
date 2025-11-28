@@ -42,7 +42,7 @@ La solución se divide en clases especializadas para cada estructura de datos y 
 
 ### 2.2. Notas sobre Precondiciones
 * **Búsqueda Binaria:** La condición de arreglo ordenado es crítica. Si no se cumple, el algoritmo retorna un resultado incorrecto, ya que se basa en la propiedad de poder descartar la mitad del espacio de búsqueda en cada paso.
-* **SLL vs. Binaria:** La búsqueda binaria no es adecuada para las Listas Simplemente Enlazadas, aunque la lista esté ordenada. Esto se debe a que la SLL requiere **acceso secuencial** ($O(k)$) para llegar al elemento en la posición media, lo que anularía la ventaja de $O(\log n)$ de la búsqueda binaria.
+* **SLL vs. Binaria:** La búsqueda binaria no es adecuada para las Listas Simplemente Enlazadas, aunque la lista esté ordenada. Esto se debe a que la SLL requiere **acceso secuencial** (O(k)) para llegar al elemento en la posición media, lo que anularía la ventaja de O(\log n) de la búsqueda binaria.
 
 ---
 
@@ -69,7 +69,7 @@ La técnica del centinela garantiza la correctitud al asegurar que el bucle de b
 | Casos | Encontrado en | Comparaciones Realizadas | Ahorro vs. Clásico (2N) |
 | :--- | :--- | :--- | :--- |
 | **Clave 7** (Índice 0) | Índice **0** | **2** | **Ahorro mínimo:** El valor se encuentra en la primera posición. |
-| **Clave 4** (No Encontrado) | Índice **-1** | **5** | **Ahorro máximo:** Se requieren $N+1$ comparaciones vs. $2N$ de la clásica. |
+| **Clave 4** (No Encontrado) | Índice **-1** | **5** | **Ahorro máximo:** Se requieren $N+1$ comparaciones vs. 2N de la clásica. |
 
 <img width="518" height="342" alt="image" src="https://github.com/user-attachments/assets/d5cf1213-95df-4b67-a96b-0fa97e3761ff" /> 
 

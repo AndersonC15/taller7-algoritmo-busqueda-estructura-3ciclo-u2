@@ -1,8 +1,11 @@
 # Taller 7 - Implementación de Algoritmos de Búsqueda
 ## FEIRNNR - Carrera de Computación (Estructura de Datos)
 **Docente:** Ing. Andrés Roberto Navas Castellanos
+
 ---
+
 ## Integrantes: 
+
 ### [Ana Panamito](https://github.com/AnaPanamito)
 ### [Royel Jima](https://github.com/R0yalCode)
 ### [Daniel Savedra](https://github.com/Dan-San837)

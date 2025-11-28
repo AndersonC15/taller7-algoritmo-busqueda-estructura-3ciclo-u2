@@ -74,14 +74,14 @@ La técnica del centinela garantiza la correctitud al asegurar que el bucle de b
 <img width="518" height="342" alt="image" src="https://github.com/user-attachments/assets/d5cf1213-95df-4b67-a96b-0fa97e3761ff" /> 
 
 
-### 3.3. Pruebas de Búsqueda en SLL
+### 3.3. Pruebas de Búsqueda en SLL 
 
-La demostración utiliza la lista `[3, 1, 3, 2]` y el nodo se asume como `Nodo(valor)`.
+La demostración utiliza la lista de prueba `[3, 1, 3, 2]` y el nodo se asume como `Nodo(valor)`. 
 
-<img width="547" height="177" alt="image" src="https://github.com/user-attachments/assets/cfe88c36-cfa6-4038-bc0d-9706b7323f22" />
+<img width="572" height="176" alt="image" src="https://github.com/user-attachments/assets/0965b6b1-44cc-43f5-a273-7f6be5c98df6" />
 
-| Escenario | Clave / Predicado | Resultado Esperado | Obtenido | Nota |
-| :--- | :--- | :--- | :--- | :--- |
-| **`buscarPrimero`** | `3` | Primer nodo con valor 3 | **Valor 3** | Confirmación de la primera ocurrencia. |
-| **`buscarUltimo`** | `3` | Último nodo con valor 3 | **Valor 3** | Confirmación de la última ocurrencia tras recorrer la lista. |
-| **`buscarTodos`** | `valor < 3` | Nodos con valor 1 y 2 | **2 nodos encontrados** | Validación de predicado. |
+| Escenario | Clave / Predicado | Resultado Esperado | Resultado Observado | Estado | Nota |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **`buscarPrimero`** | `3` | **Valor 3** (en índice 0) | **Valor 2** |  **ERROR** | La implementación retorna un valor incorrecto (probablemente el índice '2' o un conteo) en lugar del valor del nodo. |
+| **`buscarUltimo`** | `3` | **Valor 3** (en índice 2) | **Valor 2** |  **ERROR** | La implementación falla al identificar la última ocurrencia, retornando un valor incorrecto. |
+| **`buscarTodos`** | `valor < 3` | **2 nodos encontrados** (Valores 1 y 2) | **0 nodos encontrados** |  **ERROR** | La función `buscarTodos` no está evaluando correctamente el predicado o la lista no se construyó completamente. |
